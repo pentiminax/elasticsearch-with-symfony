@@ -1,0 +1,10 @@
+{
+	frankenphp
+
+	order php_server before file_server
+}
+
+localhost {
+	root * /app/public
+	php_server
+}
