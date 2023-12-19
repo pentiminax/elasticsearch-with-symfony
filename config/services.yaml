@@ -17,4 +17,5 @@ services:
             - 'controller.service_arguments'
         public: true
         arguments:
+            - '@knp_paginator'
             - '@fos_elastica.finder.course'

@@ -12,6 +12,7 @@
         "doctrine/orm": "^2.17",
         "easycorp/easyadmin-bundle": "^4.8",
         "friendsofsymfony/elastica-bundle": "^6.3",
+        "knplabs/knp-paginator-bundle": "^6.3",
         "phpdocumentor/reflection-docblock": "^5.3",
         "phpstan/phpdoc-parser": "^1.24",
         "runtime/frankenphp-symfony": "^0.2.0",
@@ -85,8 +86,7 @@
         "post-update-cmd": [
             "@auto-scripts"
         ],
-        "build-indexes": [
-            "php bin/console fos:elastica:reset",
+        "elastica-populate": [
             "php bin/console fos:elastica:populate"
         ]
     },

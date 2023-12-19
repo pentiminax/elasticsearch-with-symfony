@@ -13,6 +13,6 @@ fos_elastica:
                 category:
                     type: object
                     properties:
-                        title: ~
+                        id: ~
                 createdAt:
                     type: date
