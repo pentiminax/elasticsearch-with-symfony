@@ -10,6 +10,4 @@ WORKDIR /app
 
 COPY . /app
 
-RUN composer install
-
 EXPOSE 80 443
