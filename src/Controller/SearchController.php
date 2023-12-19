@@ -2,10 +2,10 @@
 
 namespace App\Controller;
 
-use App\Entity\Course;
 use App\Form\Model\SearchModel;
 use App\Form\Type\SearchFormType;
 use Elastica\Query\BoolQuery;
+use Elastica\Query\MatchPhrase;
 use Elastica\Query\MatchQuery;
 use Elastica\Query\Range;
 use FOS\ElasticaBundle\Finder\PaginatedFinderInterface;
@@ -37,7 +37,7 @@ class SearchController extends AbstractController
             $boolQuery = new BoolQuery();
 
             if ($data->query) {
-                $boolQuery->addMust(new MatchQuery('title', $data->query));
+                $boolQuery->addMust(new MatchPhrase('title', $data->query));
             }
 
             if (null !== $data->category) {
